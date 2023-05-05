@@ -26,6 +26,10 @@
 
 可以查看配置文件，需要修改名字为GitHub同样的昵称，邮箱也是GitHub的邮箱。
 
+`git config --global user.name "你的名字"`
+
+`git config --global user.email "你的邮箱"`
+
 然后生成公钥，请注意在生成公钥前务必进行正确的邮箱和姓名配置。
 
 在git bash中执行命令`ssh-keygen -t rsa -C "youremail@example.com"`即可创建SSH公钥，位于用户主目录，比如你的电脑名称叫admin，那么位于/c/Users/admin/.ssh下，名为id_rsa.pub，使用cat命令查看，复制该公钥到github网站中个人设置里的SSH keys中，这使得每次上传代码可以免去密码。
