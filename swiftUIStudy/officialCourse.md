@@ -58,4 +58,8 @@ HStack中的元素可以通过Spacer()进行间隔。
 
 在完成第一个文档项目后，后面要开始处理一些数据了，例如json，swift代码对我而言实在陌生，我需要使用ChatGPT和[官方swift文档](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/)辅助我了解教程演示的代码。在使用官方文档的时候建议使用cmd+f来检索，而不是使用它自带的检索功能，因为检索不出来，比如guard语句。
 
-这里的代码相比上一个项目中的图像处理更加的纯洁，我指的是字面意义上的，因为不会调用太多奇怪的库，
+这里的代码相比上一个项目中的图像处理更加的纯洁，我指的是字面意义上的，因为不会调用太多奇怪的库。
+
+
+
+我解决了之前对json解析错误的bug，这次是吃了英文的亏，longitude写错了导致json解析不正确。用的是在线的文本对照器，感觉是专门为代码设计的，非常的好用，推荐一下https://www.jq22.com/textDifference
