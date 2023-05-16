@@ -1,3 +1,72 @@
+# Hadoop 基础知识
+
+Hadoop 由apache 软件基金会开发。
+
+Hadoop是一个能够对大量数据进行分布式处理的软件框架，能够处理 PB 级数据。
+
+ 大数据技术方案为了简化并行分布式计算，采用（ Map 和 Reduce）软件模块进行处理。
+
+ Hadoop生态系统的优势包含（A B C）
+
+- A.高扩展
+- B.低成本
+- C.开源工具成熟
+- D.大型关系数据库系统
+
+使用的是HDFS文件系统，是分布式的。
+
+
+
+以下哪些工具属于Hadoop生态系统的开源工具。（ABD）
+
+- A.Hive
+- B.HBase
+- C.Mysql 
+- D.Zookerper
+
+
+
+Hadoop核心组成部份包含（A C）
+
+- A.HDFS存储系统
+- B.Hive数据仓库
+- C.MapReduce运算框架
+- D.HBase分布式数据库
+
+
+
+**对Hadoop中JobTacker的工作角色，以下说法正确的是（A B D）**
+
+- A.作业调度
+- B.分配任务
+- C.监控CPU运行效率
+- D.监控任务执行进度
+
+
+
+**在Hadoop中每个应用程序被表示成一个作业，将作业的名称设置为zhangyu，用JAVA代码编写，以下正确的是（）**
+
+**Job.SetJobName(‘zhangyu’);**
+
+
+
+ 
+
+Hadoop存储系统HDFS的体系结构的设计目标包含（A B C D）
+
+- A.自动检测处理硬件错误
+- B.流式访问数据
+- C.转移计算，不移动数据位置
+- D.简单数据一致性模型
+
+
+
+**Hadoop存储系统HDFS的文件是分块存储，每个文件块默认大小为32MB。**
+
+错误，默认是128MB
+
+
+
 # Hadoop 实操文档
 
 本文档基于章鱼大数据实验平台的实验，并不能深入了解Hadoop，但可以帮助您了解Hadoop的基本操作和简单的特性。
