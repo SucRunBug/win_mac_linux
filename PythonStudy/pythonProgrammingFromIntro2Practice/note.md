@@ -61,10 +61,6 @@ alias ll='ls -al'
 
 
 
-现在就差我的台式机的两个系统了
-
-
-
 ### 无穷的技艺
 
 这是课后的一道练习题，让我草拟三个想要创建的程序。
@@ -86,6 +82,10 @@ alias ll='ls -al'
 ### Web应用程序——基于Django的在线学习笔记
 
 在macOS上，进入虚拟环境，安装好django后，执行python manage.py migrate报错，找不到django，我怀疑是环境变量相关的问题，明天再看看，重启之后再试一下，或者改用Linux开发，甚至是Windows。
+
+我将昨天通过alias重命名的配置文件进行注释后，果然就可以成功运行了。
+
+我在Ubuntu上又试了一下，也是没问题。但书上说要在虚拟环境中使用python而不是python3，那我Ubuntu上的没法用python命令，那我可以安心在我的Mac上继续开发了。
 
 ### 数据可视化
 
