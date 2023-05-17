@@ -87,6 +87,10 @@ alias ll='ls -al'
 
 我在Ubuntu上又试了一下，也是没问题。但书上说要在虚拟环境中使用python而不是python3，那我Ubuntu上的没法用python命令，那我可以安心在我的Mac上继续开发了。
 
+
+
+这是关于Django数据查询的文档https://docs.djangoproject.com/en/4.2/topics/db/queries/
+
 ### 数据可视化
 
 
