@@ -16,3 +16,16 @@ Docker组件：客户端和服务器，Docker镜像，Registry，Docker容器。
 
 Docker架构：客户端访问服务端，客户端会经过服务端上的Docker守护进程管理容器。
 
+
+
+由于我的Ubuntu系统是WSL2的，所以我看了两本书上的安装方案，都不行，包括官方的图形化界面安装，因为我这个WSL2压根就没有图形化界面。
+
+但是通过google我发现微软还有对此的一个[官方文档](https://learn.microsoft.com/zh-cn/windows/wsl/tutorials/wsl-containers)，大概内容是给Windows装一个Docker Desktop，然后能打通WSL2，真巧妙。
+
+如果想单独在Ubuntu上安装好像也可以，这是一篇[Docker官方的文档](https://docs.docker.com/engine/install/ubuntu/)，但最终是找不到要安装的包。所以我还是使用了在Windows上的版本，但需要注意不能同时运行WSL2和Windows的容器。
+
+大致浏览了这两本书的内容后，我好像并不是太喜欢以纯命令行的方式进行操作，并且它们的内容稍微有些落后了，我还是选择官方的教程，虽然是全英文但毕竟我有翻译，值得一提的是我又可以在Mac上进行操作了，对于M系列的芯片来说，虽然只有16GB的内存，但它们在调度方面非常厉害，以至于在某些场合能达到Windows下内存32GB的效果。
+
+
+
+我目前还是对image和container无法做到细致的理解，不过image翻译为镜像，类似于一个小型的操作系统，container是容器，类似于一个沙盒，被image所运行，里面装着你的软件，也可以是操作系统，但和其它沙盒隔离开来。
