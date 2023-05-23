@@ -91,6 +91,148 @@ alias ll='ls -al'
 
 这是关于Django数据查询的文档https://docs.djangoproject.com/en/4.2/topics/db/queries/
 
+
+
+在我完成我的meal_planner的时候，我发现python命令失效了。
+
+报错zsh: command not found: python
+
+我查了下python版本，竟然从之前的3.8变成了3.11，没办法，我也不敢用重命名，只有硬着头皮用python3了。
+
+
+
+课后练习已经第二次让我从头创建一个新项目了，所以在此记录从头创建Django项目的流程。
+
+```bash
+# 创建一个项目主目录，然后进去
+# 创建一个虚拟环境
+python -m venv your-env-name_env
+# 书中说明务必使用python而不是python3
+
+# 激活虚拟环境
+source your-env-name_env/bin/
+# 如果需要停止虚拟环境
+deactive
+
+# 在虚拟环境中安装Django
+pip install django
+
+# 在Django中创建项目
+django-admin startproject project_name .
+# 注意别忘了点号，否则需要删除新增的文件。
+
+# 创建数据库
+python manage.py migrate
+
+# 启动项目
+python manage.py runserver
+
+# 创建应用程序
+python manage.py startapp app_name
+```
+
+至此，基础的框架就搭建完毕了，现在只需要根据需求自定义编码了。
+
+整理下来还是好的，因为我发现我把项目和应用名称都混为一谈了。
+
+
+
+接下来是定义模型，在应用软件的目录下，找到model.py文件，在这里进行编辑。
+
+模型主要是指用户想要输入的数据类型，比如学习的主题，学习的科目等等，那我们就可以使用类来接收这些数据。
+
+再比如我要弄一个饮食计划表，那就需要日期、早中晚和对应的食谱。
+
+```python
+from django.db import models
+
+# Create your models here.
+class Date(models.Model):
+    """日期，如一月三日"""
+    text = models.TextField(max_length=20)
+    date_added = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.text
+    
+class Time(models.Model):
+    """早中晚"""
+    date = models.ForeignKey(Date, on_delete=models.CASCADE)
+    text = models.TextField(max_length=20)
+    date_added = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural = 'times'   # 没明白有啥用
+    
+    def __str__(self):
+        return self.text
+    
+class Meal(models.Model):
+    """吃的啥"""
+    time = models.ForeignKey(Time, on_delete=models.CASCADE)
+    text = models.TextField()
+    date_added = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.text
+
+```
+
+创建好模型后就需要**激活模型**
+
+进入项目目录中的setting.py，将此应用程序包含进该项目
+
+为列表INSTALLED_APPS的首元素加上自己的应用程序的名字，再次强调，请务必将自己的程序放在该列表的最前面。
+
+
+
+我们新增了模型，所以也要修改数据库
+
+```bash
+python manage.py makemigrations app_name
+```
+
+使数据库能存储之前定义的模型类型的数据
+
+再**迁移数据库**
+
+```bash
+python manage.py migrate
+```
+
+
+
+接下来为我们的网站**添加一个超级用户**用于管理：
+
+```bash
+python manage.py createsuperuser
+```
+
+根据引导完成信息录入即可。
+
+然后需要**向管理网站注册模型**
+
+在应用程序目录下找到admin.py文件
+
+向网站注册类名，比如注册之前的Date类，输入
+
+```py
+from .models import Date
+admin.site.register(Date)
+```
+
+
+
+**通过Django shell 观察变量是否正确**
+
+```bash
+python manage.py shell
+```
+
+
+
+
+
 ### 数据可视化
 
 

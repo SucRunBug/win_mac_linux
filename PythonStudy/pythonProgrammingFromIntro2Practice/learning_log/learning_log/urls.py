@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
+urlpatterns = [ # 用于包含app中的URL
+    path('admin/', admin.site.urls),    # 该模块定义了可在管理网站中请求的所有URL
     path('', include('learning_logs.urls')),
 ]
