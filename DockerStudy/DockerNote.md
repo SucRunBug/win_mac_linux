@@ -61,3 +61,64 @@ Docker架构：客户端访问服务端，客户端会经过服务端上的Docke
 `docker tag getting-started YOUR-USER-NAME/getting-started`
 
 `docker push YOUR-USER-NAME/getting-started`
+
+
+
+果然，在其它机器测试时，解决了之前关于不同系统架构的困惑。我的Mac使用默认的命令构建的镜像会是arm64的Linux版本，是没有办法在play with docker平台（基于amd64的）或者我的Windows笔记本上运行，但是在构建镜像的时候可以使用选项，就可以构建amd64的Linux版本。
+
+```bash
+docker build --platform linux/amd64 -t YOUR-USER-NAME/getting-started .
+```
+
+然后再重新推送上去，再在新平台上执行：
+
+```bash
+docker run -dp 3000:3000 YOUR-USER-NAME/getting-started
+```
+
+
+
+但我们每次重启容器时，数据都会丢失。
+
+我其实不太明白Docker 持久化存储的原理，但我会记录下是怎么操作的，因为这真的很有必要。
+
+```bash
+docker volume create todo-db
+```
+
+```bash
+docker run -dp 3000:3000 --mount type=volume,src=todo-db,target=/etc/todos getting-started
+```
+
+这次构建不太一样，因为添加mount 选项，将上一步创建的数据库挂在到容器中。
+
+天呐，我三个月前添加的项目都还在这里，这真是厉害。
+
+如果需要测试是否有效，就添加几个代办事项，然后删除现有容器，再使用和上面同样的命令构建一个新容器，看是否还有那几个项目。
+
+
+
+查看数据库信息
+
+```bash
+docker volume inspect todo-db
+[
+    {
+        "CreatedAt": "2023-03-03T13:17:04Z",
+        "Driver": "local",
+        "Labels": {},
+        "Mountpoint": "/var/lib/docker/volumes/todo-db/_data",
+        "Name": "todo-db",
+        "Options": {},
+        "Scope": "local"
+    }
+]
+```
+
+
+
+volume这个词很神奇，有许多意思，我认为这里的意思应该是「卷」juǎn，还有音量和体积的意思。
+
+
+
+当我们修改了某些东西后，都需要花一些时间来重建一个容器，这样比较麻烦，接下来会有更方便的方式进行重建。
