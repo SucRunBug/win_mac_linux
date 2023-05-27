@@ -131,3 +131,88 @@ n,m在0到1000000取值，coef在-1000到1000取值，expn在-1000000000到10000
 
 ```
 
+这题就是按照视频讲解里的来也过不了，而且视频里的代码很糟糕，无意义的命名、没有一点注释和使用全局变量并不初始化。
+
+我写的又有几个测试用例超时过不了。
+
+
+
+
+
+在n个城市之间原本要规划修建许多条下水管道，管理人员发现这些管道会形成一条回路，而下水道只要将城市联通即可，所以回路会加大施工的成本。所以希望你来帮忙找出多余的管道来进行优化。当然管道和管道之问是有区别的，比如用Sij来表示i到j的管道管理费用，Sij越小则表示该管道管理费用越低。能否去除一些管线，使得总管理成本最低。求出最低的管理成本（不存在自身与自身成为回路的管道）。
+
+输入格式：第一行有两个数n和k表示城市数量和管道数量;
+接下来k行，每行都有三个数i, j, c表示城市i和城市j之间的管道
+成本为c。
+
+输出格式：一个正整数，最低管理成本。
+
+除了Prim算法，还可以使用Kruskal算法来解决这个问题。Kruskal算法是另一种常用的最小生成树算法。
+
+Kruskal算法的基本思想是从成本最低的边开始选择，并逐步添加边到最小生成树中，直到最小生成树包含所有的城市或者所有的边都被考虑过。
+
+下面是使用Kruskal算法解决这个问题的C++代码示例：
+
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+struct Edge {
+    int city1, city2, cost;
+};
+
+bool compareEdges(const Edge& e1, const Edge& e2) {
+    return e1.cost < e2.cost;
+}
+
+int findParent(vector<int>& parent, int city) {
+    if (parent[city] == -1)
+        return city;
+    return findParent(parent, parent[city]);
+}
+
+void unionSets(vector<int>& parent, int city1, int city2) {
+    int parent1 = findParent(parent, city1);
+    int parent2 = findParent(parent, city2);
+    parent[parent1] = parent2;
+}
+
+int findMinCost(vector<Edge>& edges, int n) {
+    sort(edges.begin(), edges.end(), compareEdges);
+
+    vector<int> parent(n + 1, -1); // 记录城市的父节点，用于判断是否形成回路
+
+    int minCostSum = 0; // 最低管理成本
+
+    for (const auto& edge : edges) {
+        int parent1 = findParent(parent, edge.city1);
+        int parent2 = findParent(parent, edge.city2);
+
+        if (parent1 != parent2) {
+            minCostSum += edge.cost;
+            unionSets(parent, parent1, parent2);
+        }
+    }
+
+    return minCostSum;
+}
+
+int main() {
+    int n, k;
+    cin >> n >> k;
+
+    vector<Edge> edges(k);
+
+    for (int i = 0; i < k; ++i) {
+        cin >> edges[i].city1 >> edges[i].city2 >> edges[i].cost;
+    }
+
+    int minCost = findMinCost(edges, n);
+    cout << minCost << endl;
+
+    return 0;
+}
+```
