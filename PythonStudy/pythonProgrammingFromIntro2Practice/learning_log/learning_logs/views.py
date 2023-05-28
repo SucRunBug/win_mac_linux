@@ -11,4 +11,4 @@ def topics(request):
     """show all topics"""
     topics = Topic.objects.order_by('data_added')
     context = {'topics': topics}
-    return render(request, 'learning_logs/yopic.html', context)
+    return render(request, 'learning_logs/topics.html', context)

@@ -101,3 +101,52 @@ git pull --no-rebase origin main
 ```
 git push origin main
 ```
+
+
+
+# git协同工作
+
+## 喜欢的命令
+
+`git stash` 可以把当前没有完成的事情先暂存一下
+
+`git cherry-pick` 可以让你有选择地合并提交
+
+`git add -p` 可以让你挑选改动提交
+
+`git grep $regexp $(git rev-list --all)` 可以用来在所有的提交中找代码。
+
+## 中心式协同工作流
+
+### 一般过程
+
+1. 从服务器上做`git pull origin master`把代码同步下来。
+2. 改完后，`git commit`到本地仓库中。
+3. 然后`git push origin master`到远程仓库中，这样其他同学就可以得到你的代码了。
+
+**注意，这里有我上面冲突记录的解决方案。**
+
+如果在第 3 步发现 push 失败，因为别人已经提交了，那么你需要先把服务器上的代码给 pull 下来，为了避免有 merge 动作，你可以使用 `git pull --rebase` 。这样就可以把服务器上的提交直接合并到你的代码中，对此，Git 的操作是这样的。
+
+1. 先把你本地提交的代码放到一边。
+2. 然后把服务器上的改动下载下来。
+3. 然后在本地把你之前的改动再重新一个一个地做 commit，直到全部成功。
+
+如果有冲突，那么你要先解决冲突，然后做 `git rebase --continue` 。git 在做 pull --rebase 时，会一个一个地应用（apply）本地提交的代码，如果有冲突就会停下来，等你解决冲突。
+
+上面这种方式，是我目前主要在用的，但如果开发的功能一旦多起来了，这样会干扰严重，于是有了下面的方案。
+
+
+
+## 功能分支协同工作流
+
+我们引入“功能分支”。这个协同工作流的开发过程如下。
+
+1. 首先使用 `git checkout -b new-feature` 创建 “new-feature”分支。
+2. 然后共同开发这个功能的程序员就在这个分支上工作，进行 add、commit 等操作。
+3. 然后通过 `git push -u origin new-feature` 把分支代码 push 到服务器上。
+4. 其他程序员可以通过`git pull --rebase`来拿到最新的这个分支的代码。
+5. 最后通过 Pull Request 的方式做完 Code Review 后合并到 Master 分支上。
+
+
+
