@@ -1,0 +1,17 @@
+﻿  Benchmark.cpp
+C:\Users\admin\Desktop\github\win_mac_linux\Concurrent-memory-pool\ConcurrentMemoryPool\ConcurrentMemoryPool\Common.h(175,1): warning C4334: “<<”: 32 位移位的结果被隐式转换为 64 位(是否希望进行 64 位移位?)
+C:\Users\admin\Desktop\github\win_mac_linux\Concurrent-memory-pool\ConcurrentMemoryPool\ConcurrentMemoryPool\Common.h(211,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  CentralCache.cpp
+C:\Users\admin\Desktop\github\win_mac_linux\Concurrent-memory-pool\ConcurrentMemoryPool\ConcurrentMemoryPool\Common.h(175,1): warning C4334: “<<”: 32 位移位的结果被隐式转换为 64 位(是否希望进行 64 位移位?)
+C:\Users\admin\Desktop\github\win_mac_linux\Concurrent-memory-pool\ConcurrentMemoryPool\ConcurrentMemoryPool\Common.h(211,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  PageCache.cpp
+C:\Users\admin\Desktop\github\win_mac_linux\Concurrent-memory-pool\ConcurrentMemoryPool\ConcurrentMemoryPool\Common.h(175,1): warning C4334: “<<”: 32 位移位的结果被隐式转换为 64 位(是否希望进行 64 位移位?)
+C:\Users\admin\Desktop\github\win_mac_linux\Concurrent-memory-pool\ConcurrentMemoryPool\ConcurrentMemoryPool\Common.h(211,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  ThreadCache.cpp
+C:\Users\admin\Desktop\github\win_mac_linux\Concurrent-memory-pool\ConcurrentMemoryPool\ConcurrentMemoryPool\Common.h(175,1): warning C4334: “<<”: 32 位移位的结果被隐式转换为 64 位(是否希望进行 64 位移位?)
+C:\Users\admin\Desktop\github\win_mac_linux\Concurrent-memory-pool\ConcurrentMemoryPool\ConcurrentMemoryPool\Common.h(211,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  UtilTest.cpp
+C:\Users\admin\Desktop\github\win_mac_linux\Concurrent-memory-pool\ConcurrentMemoryPool\ConcurrentMemoryPool\Common.h(175,1): warning C4334: “<<”: 32 位移位的结果被隐式转换为 64 位(是否希望进行 64 位移位?)
+C:\Users\admin\Desktop\github\win_mac_linux\Concurrent-memory-pool\ConcurrentMemoryPool\ConcurrentMemoryPool\Common.h(211,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  正在生成代码...
+  ConcurrentMemoryPool.vcxproj -> C:\Users\admin\Desktop\github\win_mac_linux\Concurrent-memory-pool\ConcurrentMemoryPool\x64\Debug\ConcurrentMemoryPool.exe
