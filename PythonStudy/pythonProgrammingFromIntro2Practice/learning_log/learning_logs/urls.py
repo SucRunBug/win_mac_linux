@@ -12,5 +12,7 @@ urlpatterns = [ # including the request page
     # The second parameter means call a function in view.py
     # The third parameter is the URL model name, we can reference it in other palce
 
-    path('topics/', views.topic, name='topics'),
+    path('topics/', views.topics, name='topics'),
+    # 特定主题的详细页面
+    path('topics.<int:topic_id>/', views.topic, name='topic'),
 ]
