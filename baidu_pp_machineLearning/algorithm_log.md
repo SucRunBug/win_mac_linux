@@ -1,5 +1,7 @@
 此文件记录我的每周刷题记录。
 
+## 第一周
+
 现在有 n 个蜂巢，每一个蜂巢都对应了一个蜂蜜值 Si。 有一些蜂巢相互联结，使得他们可以共享蜂蜜值，即该蜂巢的蜂蜜值变为：它和它连接(直接连接或间接连接）的蜂巢的蜂蜜值的和。 现在小码哥想要查询一下一些蜂巢的蜂蜜值。  输入格式：第一行有两个数 n（蜂巢的数量）、m（操作的数量） 第二行有 n 个数字（s1,…, sn)：分别表示了每一个蜂巢的蜂蜜值。 随后有 m行：第一个数字如果是 1，则后面还有两个数字a，b，表示此次发现蜂巢a和b是相连的。第一个数字如果是2，则后面只有一个数字c，表示查询所有与蜂巢c相连的蜂巢(包括自己)的总蜂蜜值。 输出格式：对每一次的查询操作输出查询的蜂巢的蜂蜜值。
 
 ```c++
@@ -216,3 +218,43 @@ int main() {
     return 0;
 }
 ```
+
+## 第二周
+
+**给你n个数字，通过交换相邻的两个数字，实现升序，请求出最少交换的次数**
+
+超时的算法
+
+```py
+def bubble_sort(arr):
+    n = len(arr)
+    swaps = 0
+    for i in range(n):
+        # 提前退出标志，如果本轮没有进行交换，则已经有序
+        swapped = False
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+                swaps += 1
+                swapped = True
+        if not swapped:
+            break
+    return swaps
+
+def main():
+    #code here
+    n = int(input())
+    input_string = input()
+    numbers = [int(num) for num in input_string.split()]
+    swaps = bubble_sort(numbers)
+    print(swaps)
+    pass
+
+
+if __name__ == '__main__':
+    main();
+```
+
+
+
+高效的算法需要利用到树状数组的相关概念，需要求逆序对数之类的。
