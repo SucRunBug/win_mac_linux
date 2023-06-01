@@ -14,5 +14,5 @@ urlpatterns = [ # including the request page
 
     path('topics/', views.topics, name='topics'),
     # 特定主题的详细页面
-    path('topics.<int:topic_id>/', views.topic, name='topic'),
+    path('topics/<int:topic_id>/', views.topic, name='topic'),
 ]

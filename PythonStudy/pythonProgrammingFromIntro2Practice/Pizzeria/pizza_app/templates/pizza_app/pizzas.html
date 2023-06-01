@@ -1,0 +1,14 @@
+{% extends "pizza_app/base.html" %} 
+{% block content %} 
+
+    <p>Pizzas</p>
+
+    <ul>
+        {% for pizza in pizzas %} 
+            <li>{{ pizza }}</li>
+        {% empty %} 
+            <li>No pizzas have been added yet.</li>
+        {% endfor %}
+    </ul>
+
+{% endblock content %} 

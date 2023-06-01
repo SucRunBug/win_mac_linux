@@ -104,6 +104,71 @@ git push origin main
 
 
 
+2023.5.29
+
+自从使用github一个月以后，我几乎每天都会上传文件，很少出了冲突或者错误。
+
+但是昨天我不小心把paddle安装到我的虚拟环境里了，也就顺带被添加到暂存库了，这个库超过了100mb，就传不上去，我之前就是因为这个错误放弃使用了gitee，没想到GitHub还是会限制，但是好像可以用专门的大文件管理方式。
+
+总之错误信息如下：
+
+```bash
+remote: Resolving deltas: 100% (946/946), completed with 13 local objects.
+remote: error: Trace: 397ae53f6da38d29b3122f8a2478a738d0add3083ca23c1bcbe7010b6919848c
+remote: error: See https://gh.io/lfs for more information.
+remote: error: File PythonStudy/pythonProgrammingFromIntro2Practice/learning_log/ll_env/lib/python3.9/site-packages/paddle/fluid/libpaddle.so is 158.30 MB; this exceeds GitHub's file size limit of 100.00 MB
+remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+To github.com:SucRunBug/win_mac_linux.git
+ ! [remote rejected]   main -> main (pre-receive hook declined)
+error: failed to push some refs to 'github.com:SucRunBug/win_mac_linux.git'
+```
+
+解决方案
+
+```bash
+git filter-branch --tree-filter 'rm -f PythonStudy/pythonProgrammingFromIntro2Practice/learning_log/ll_env/lib/python3.9/site-packages/paddle/fluid/libpaddle.so' HEAD
+```
+
+```bash
+git push --force origin main
+```
+
+参考ChatGPT的回答：
+
+这个错误提示是因为您尝试将一个超过GitHub文件大小限制的文件（158.30 MB）推送到您的GitHub仓库中。 GitHub的文件大小限制为100 MB，因此您需要采取适当的措施来解决此问题。
+
+您可以使用Git Large File Storage (LFS)来管理大型文件。 
+
+如果您已经将大文件添加到暂存区（也称为索引），但尚未提交更改，您可以使用以下命令从git存储库中完全删除它：
+
+```bash
+git rm --cached path/to/your/large/file
+```
+
+这将从您的git存储库中删除该文件的历史记录，并将其从暂存区中删除。请注意，这不会从您的本地文件系统中删除该文件。
+
+如果您已经提交了更改，并且要从git存储库中完全删除大文件，您需要执行以下步骤：
+
+1. 从您的本地文件系统中删除大文件。
+
+2. 使用以下命令来删除存储库中的大文件的历史记录：
+
+```bash
+git filter-branch --tree-filter 'rm -f path/to/your/large/file' HEAD
+```
+
+这将删除存储库中所有提交的大文件的历史记录。这可能需要一些时间，具体取决于您的存储库的大小和提交历史记录的数量。
+
+3. 将存储库强制推送到GitHub：
+
+```bash
+git push --force origin your-branch
+```
+
+请注意，这会覆盖GitHub上存储库上的任何更改，并且可能会影响其他人的工作。因此，您应该谨慎使用`git push --force`命令，并确保在执行之前与您的团队成员进行沟通。
+
+最后，请注意，删除存储库中的历史记录可能会导致某些提交的更改丢失。因此，在执行此操作之前，您应该仔细检查您的存储库，并确保您不会丢失任何重要的更改。
+
 # git协同工作
 
 ## 喜欢的命令
