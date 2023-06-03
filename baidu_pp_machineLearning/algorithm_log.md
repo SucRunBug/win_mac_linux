@@ -257,4 +257,106 @@ if __name__ == '__main__':
 
 
 
-高效的算法需要利用到树状数组的相关概念，需要求逆序对数之类的。
+高效的算法需要利用到树状数组的相关概念，需要求逆序对之类的。
+
+整体算法的思路是：将数组元素离散化（离散化的意思是，例如1 2 999 3的序列，从大到小依次标上号，这4个数分别为4 3 1 2），然后遍历这个新数组，查看每一个数之前有没有比它小的数，如果有，逆序对就增加1，最终逆序对的数量就是最少需要交换的数量。
+
+
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+const int N = 2e5 + 7;
+int a[N];   // 离散化原数组
+int b[N];   // 原数组
+int c[N];   // 离散化管理数组
+int n;
+long long ans;
+
+// 树状数组模版
+int lowbit(int x) { return x & -x; }
+void add(int i, int x) {
+    for(; i <=n; i += lowbit(i))
+        c[i] += x;
+}
+int sum(int i) {
+    int ans = 0;
+    for (; i > 0; i -= lowbit(i))
+        ans += c[i];
+    return ans;
+}
+// 离散化
+bool cmp(const int x, const int y) {
+    if (b[x] == b[y])
+        return x > y;
+    return b[x] > b[y];
+}
+
+int main() {
+    cin >> n;
+    // 离散化
+    for (int i = 1; i <= n; i++) {
+        cin >> b[i];
+        a[i] = i;
+    }
+    sort(a + 1, a + n + 1, cmp);
+    for (int i = 1; i <= n; ++i) {
+        add(a[i], 1);
+        ans += sum(a[i] - 1);
+    }
+    cout << ans << endl;
+    return 0;
+}
+```
+
+
+
+泡泡，输入n,m，分别表示泡泡数量和碰撞次数，然后输入碰撞两个泡泡的碰撞节点。每个泡泡是由链表环组成，泡泡之间碰撞规则是，碰撞节点会相连，然后碰撞节点a的右节点会和碰撞节点b的左节点相连。最后输出所有泡泡碰撞后的情况。
+
+
+
+```cpp
+using namespace std;
+
+const int N = 1e6+7;
+struct NODE {
+    int l, r;
+    bool flag;
+}bubb[N];
+
+int main() {
+    int n, m;
+    cin >> n >> m;
+    for (int i = 1; i <= n; ++i) {
+        bubb[i].l = bubb[i].r = i;  // init bubb, the i is val
+    }
+    while (m--) {
+        int x, y;
+        cin >> x >> y;
+        // 碰撞
+        int t1 = bubb[x].r;
+        int t2 = bubb[y].l;
+        bubb[x].r = y;
+        bubb[y].l = x;
+        bubb[t1].l = t2;
+        bubb[t2].r = t1;
+    }
+    // 按照字典序求出泡泡环
+    for (int i = 1; i <= n; i++) {
+        if (!bubb[i].flag) {
+            int temp = i;
+            while (!bubb[temp].flag) {
+                cout << temp << " ";
+                bubb[temp].flag = true;
+                temp = bubb[temp].r;
+            }
+            cout << endl;
+        }
+    }
+    return 0;
+}
+```
+
+我也是头一次知道双向链表左右指针是不用是指针的，直接用类似于数组元素的下标进行表示。
