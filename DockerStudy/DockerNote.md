@@ -214,7 +214,7 @@ docker rm CONTAINER_ID
 
 
 
-## 容器共享
+### 容器共享
 
 这和GitHub非常类似，先到[Docker Hub Container Image Library | App Containerization](https://hub.docker.com/)注册账号，然后创建自己的仓库，最后上传自己的容器即可。 
 
@@ -254,7 +254,7 @@ cat /proc/cpuinfo
 
 
 
-## 容器数据持久化存储
+### 容器数据持久化存储
 
 有了之前的经验，我不会再被教程欺骗两次了，首先需要使用volume mount，保证每次添加的用户数据都能被加载。
 
@@ -282,7 +282,7 @@ docker run -dp 3000:3000 --mount type=volume,src=NAME-db,target=/etc/todos PROJE
 
 
 
-## bind mount & nodemon 同步改动
+### bind mount & nodemon 同步改动
 
 1. 将源代码装入容器
 
@@ -313,3 +313,83 @@ docker run -dp 3000:3000 \
 
 卷绑定和挂载绑定不能同时进行？
 
+这是可以做到的，只需要同时加上选项即可。但目前来说还用不着这样，挂载绑定更适合软件开发的过程中使用，卷绑定更适合容器发布时使用。
+
+
+
+### 多容器
+
+比如多了个MySQL数据库来存储todo app上的数据，这个数据库引擎需要运行在另外的容器上（那本身自带的SQLite在哪？之前的均为单容器，那我想应该就是集成到了一个容器里）。
+
+要确保容器之间通信，需要建立容器之间的网络。
+
+- 创建网络：
+
+```bash
+docker network create todo-app
+```
+
+这里的todo-app应该是网络的名称。
+
+- 创建一个MySQL容器，并连接到网络：
+
+```bash
+docker run -d \
+     --network todo-app --network-alias mysql \
+     -v todo-mysql-data:/var/lib/mysql \
+     -e MYSQL_ROOT_PASSWORD=secret \
+     -e MYSQL_DATABASE=todos \
+     mysql:8.0
+```
+
+> 您会注意到在上面的命令中有一个名为 todo-mysql-data 的卷，它挂载在/var/lib/mysql 上，MySQL 在这里存储它的数据。但是，您从未运行过 docker 卷创建命令。Docker 识别出您希望使用命名卷，并自动为您创建一个。
+
+- 登录MySQL以确认是否创建成功
+
+```bash
+docker exec -it <mysql-container-id> mysql -u root -p
+```
+
+
+
+要连接到同一网络下的另外一个容器，可以通过容器的IP地址。下面会介绍nicolaka/netshot 容器，它附带了许多对于故障排除或调试网络问题非常有用的工具。
+
+
+
+- 在与MySQL同一网络下启动nicolaka/netshot 容器
+
+```bash
+docker run -it --network todo-app nicolaka/netshoot
+```
+
+> 在容器内部，您将使用 dig 命令，这是一个有用的 DNS 工具。查找主机名 mysql 的 IP 地址。
+
+```bash
+dig mysql
+```
+
+- 运行你的项目并连接到网络和MySQL
+
+```bash
+docker run -dp 3000:3000 \
+   -w /app -v "$(pwd):/app" \
+   --network todo-app \
+   -e MYSQL_HOST=mysql \
+   -e MYSQL_USER=root \
+   -e MYSQL_PASSWORD=secret \
+   -e MYSQL_DB=todos \
+   node:18-alpine \
+   sh -c "yarn install && yarn run dev"
+```
+
+- 查看MySQL数据库
+
+```bash
+docker exec -it <mysql-container-id> mysql -p todos
+```
+
+```sql
+select * from todo_items;
+```
+
+因为我添加的数据中含有中文，所以存在中文不显示的情况，要解决这种情况可以选择更改数据库的编码为utf8
