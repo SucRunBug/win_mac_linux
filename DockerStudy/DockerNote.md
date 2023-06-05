@@ -393,3 +393,54 @@ select * from todo_items;
 ```
 
 因为我添加的数据中含有中文，所以存在中文不显示的情况，要解决这种情况可以选择更改数据库的编码为utf8
+
+
+
+### Docker Compose 
+
+这是一个定义和分析多容器的工具，它可以在一个文件中定义你的应用栈，这个插件是随docker自动安装好的。
+
+- 通过命令查看版本：
+
+```bash
+docker compose version
+```
+
+- 创建Compose文件
+
+在项目的app目录下新建一个docker-compose.yml文件，然后就像一个makefile一样，将运行容器的一对命令集中在这里，以`services:`开头。
+
+比如下面这个命令：
+
+```bash
+docker run -dp 3000:3000 \
+  -w /app -v "$(pwd):/app" \
+  --network todo-app \
+  -e MYSQL_HOST=mysql \
+  -e MYSQL_USER=root \
+  -e MYSQL_PASSWORD=secret \
+  -e MYSQL_DB=todos \
+  node:18-alpine \
+  sh -c "yarn install && yarn run dev"
+```
+
+放入.yml文件后是：
+
+```yml
+services:
+  app:
+    image: node:18-alpine
+    command: sh -c "yarn install && yarn run dev"
+    ports:
+      - 3000:3000
+    working_dir: /app
+    volumes:
+      - ./:/app
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: secret
+      MYSQL_DB: todos
+```
+
+这个文件在vscode里竟然是一个粉色的鲸鱼，然后还需要注意缩进格式，应该类似于python那样的缩进格式。
