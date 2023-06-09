@@ -17,4 +17,36 @@ This small note references Simon's class, i watch the privated copies viedo from
 
 
 
+## gap filling
+
 In the first video, he gave me an example of filling in the gaps, and do what I mentioned before. However, I found that sometimes it can be misleading, so we should be careful when two similar answers appear.
+
+
+
+When you finish your reading practice, you should make a "keyword table" which has two columns: one for the keywords in the question and the other for similar words in the passage.
+
+Such as:
+
+| The keywords in question | Similar words in the passage |
+| ------------------------ | ---------------------------- |
+| inside                   | containing                   |
+
+
+
+## True or False or Not give
+
+True / Yes - the correct information is given
+
+False / No - different information is given, contradting the statement
+
+Not given - we don't konw the answer, there isn't enough information
+
+
+
+**Remeber**
+
+Find the 'keywords' and then compare the question and passage carefully.
+
+Answers are always in the correct order in the passage(for this type of question)
+
+ 
