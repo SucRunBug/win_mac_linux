@@ -360,3 +360,38 @@ int main() {
 ```
 
 我也是头一次知道双向链表左右指针是不用是指针的，直接用类似于数组元素的下标进行表示。
+
+
+
+## 第三周
+
+题目：四柱汉诺塔，移动的最少步骤
+
+视频提到，三柱汉诺塔的推导过程，最终得到了一个公式，然后四柱汉诺塔通过将移动的过程不断看做三柱汉诺塔也可以推到出一个公式，但是个不定式，所以需要尝试出最少步骤。
+
+```cpp
+#include <iostream>
+#include <cmath>
+#include <cstring>
+
+using namespace std;
+
+int f, dp[55], INF = 0x3f3f3f3f;
+
+int main() {
+    cin >> f;
+    memset(dp, INF, sizeof(dp));
+    dp[0] = 0, dp[1] = 1, dp[2] = 3;
+    cout << 1 << endl << 3 << endl;
+    for (int x = 3; x <= f; ++x) {
+        for (int k = 1; k < x; ++k) {
+            if (dp[x] > dp[x - k] * 2 + pow(2, k) - 1)
+                dp[x] = dp[x - k] * 2 + pow(2, k) - 1;
+        }
+        cout << dp[x] << endl;
+    }
+    return 0;
+}
+```
+
+唯一不清楚的是INF为啥这么奇怪，难道就是随便给了一个比较大的数字吗？
