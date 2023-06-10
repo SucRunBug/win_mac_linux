@@ -50,3 +50,34 @@ Find the 'keywords' and then compare the question and passage carefully.
 Answers are always in the correct order in the passage(for this type of question)
 
  
+
+## Matching paragraph headings
+
+- ﻿﻿List of headings
+- ﻿﻿Choose the best heading for each paragraph in the passage
+
+
+
+'Paragraph headings' questions are difficult...
+
+because the answers are not in order in the passage and because some of the headings may be similar
+
+
+
+**Techniques**
+
+1. Do 'paragraph headings' questions last
+
+- ﻿﻿Do all other questions for that passage first
+- ﻿﻿You will then be more familiar with the passage
+- ﻿﻿You might get some of the answers from memory
+
+2. ﻿﻿﻿Underline keywords' in each heading on the list
+
+3. ﻿﻿﻿Then read the shortest or easiest paragraph
+
+- ﻿﻿Read at normal speed
+- ﻿﻿Underline the main ideas in the paragraph
+- ﻿﻿Compare with all of the headings
+- Choose the best one
+
