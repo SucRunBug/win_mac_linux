@@ -81,3 +81,30 @@ because the answers are not in order in the passage and because some of the head
 - ﻿﻿Compare with all of the headings
 - Choose the best one
 
+
+
+## Which paragraph contains?
+
+- List of statements
+- ﻿﻿Find which paragraph contains the information in each statement
+
+'Which paragraph contains' questions are difficult..
+
+- ﻿﻿because the answers are **not in order** in the passage
+- ﻿﻿the same paragraph may contain more than one answer
+- ﻿﻿some of the paragraphs may not contain any answers
+
+Techniques
+
+1. Do which paragraph contains' questions last
+
+- ﻿﻿Do all other questions for that passage first
+- ﻿﻿You will then be more familiar with the passage
+- ﻿﻿You might get some of the answers from memory
+
+2. ﻿﻿﻿Underline 'keywords' in each statement
+
+3. ﻿﻿﻿Then start with the easiest statement
+
+- ﻿﻿Information that you remember reading about
+- ﻿﻿Easy keywords that you can scan for (like name, address and number...)
