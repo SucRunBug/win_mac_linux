@@ -108,3 +108,28 @@ Techniques
 
 - ﻿﻿Information that you remember reading about
 - ﻿﻿Easy keywords that you can scan for (like name, address and number...)
+
+
+
+## Multiple choice questions
+
+Basic exam techniques:
+
+1. ﻿﻿﻿Don't read the passage first
+2. ﻿﻿﻿Just read the title
+3. ﻿﻿﻿Then go to the first question
+4. ﻿﻿﻿Underline 'keywords' in the question
+5. ﻿﻿﻿Then search for those words in the passage
+6. ﻿﻿﻿Underline them
+7. ﻿﻿﻿Read that part of the passage carefully
+8. ﻿﻿﻿Try to get the answer
+
+1. ﻿﻿﻿Read at normal speed
+2. ﻿﻿﻿Only skim / scan for names or numbers
+3. ﻿﻿﻿Miss any difficult questions, get to the end
+
+Multiple choice questions:
+
+can be difficult because there is a lot to read, and the choices can be similar and confusing
+
+Good News! You can normally find the answers **in order** in the passage
