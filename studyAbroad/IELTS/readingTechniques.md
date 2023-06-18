@@ -132,4 +132,41 @@ Multiple choice questions:
 
 can be difficult because there is a lot to read, and the choices can be similar and confusing
 
-Good News! You can normally find the answers **in order** in the passage
+Good News! You can normally find the answers **in order** in the passagez
+
+
+
+## Matching names
+
+- ﻿﻿A list of question statements
+- ﻿﻿A box containing a list of names
+
+'Matching names' sections can be difficult because...
+
+- ﻿﻿the answers are **not in order** in the passage
+- ﻿﻿one name may be used for more than one answer (if it matches more than one of the statements)
+- ﻿﻿some of the names may not be needed
+
+
+
+Techniques
+
+1. ﻿﻿﻿Underline 'keywords' in each statement
+2. ﻿﻿﻿Scan the passage to find all of the names
+
+- Highlight each name clearly (e.g. circle them)
+
+3. Choose the name with the shortest description
+
+- ﻿﻿read the sentences around that name
+- ﻿﻿underline the main ideas relating to that name
+
+4. Compare with all of the question statements
+
+- go through the question statements to see if any of them match what you read
+
+
+
+## Short answer questions
+
+Method / techniques: 'keyword technique
