@@ -170,3 +170,15 @@ Techniques
 ## Short answer questions
 
 Method / techniques: 'keyword technique
+
+
+
+## Matching sentence endings
+
+Method / techniques: 'keyword technique
+
+
+
+## Time
+
+20 minutes for each passage
