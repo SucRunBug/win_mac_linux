@@ -23,6 +23,7 @@ So, I can cheek my photo.
 - 牛肉青椒炒饭 Fried rice with beef and green pepper
 - 排骨盖浇饭 Pork ribs with rice
 - 冒菜 Maocai
+- 炮仗
 
 And then, I got my choices, so i can arrange my food table to accelarate my process.
 
@@ -36,13 +37,13 @@ And then, I got my choices, so i can arrange my food table to accelarate my proc
 
 寿司 sushi
 
-牛肉青椒炒饭 Fried rice with beef and green pepper
+牛肉青椒炒饭 Fried rice with beef and green pepper/炮仗
 
 ## Wednesday
 
 披萨/丁香园盖浇饭/学生食堂一楼快餐
 
-扬州炒饭 Yeung Chow fried rice
+扬州炒饭 Yeung Chow fried rice/馄饨 Wonton
 
 ## Thursday
 
@@ -52,7 +53,7 @@ And then, I got my choices, so i can arrange my food table to accelarate my proc
 
 ## Friday
 
-排骨盖浇饭 Pork ribs with rice
+排骨盖浇饭 Pork ribs with rice/ 自由探索
 
 鸡公煲 chicken hotpot
 
