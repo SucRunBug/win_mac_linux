@@ -149,3 +149,78 @@ Between 1980 and 2005, electricity production from nuclear power rose dramatical
 
 
 
+## Lesson 3 Bar charts
+
+Bar charts can show numbers changing over a period of time.
+
+This type of bar chart is the same as a line graph.
+
+
+
+However! Bar charts don't always show time...
+they often only compare numbers
+
+
+
+Your job is to compare the bars.
+
+
+
+First, make a very general comparison
+(summary / overview paragraph)
+
+可以谈论最值或者相似的值
+
+
+
+Second, compare specific numbers
+(details' paragraphs)
+
+
+
+### 例子
+
+#### Introduction - paraphrase the question 
+
+The chart below shows global sales of the top five mobile phone brands between 2009 and 2013.
+
+The bar chart compares the number of mobile phones sold worldwide by the five most popular
+manufacturers in the years 2009, 2011 and 2013.
+
+#### Overview - 2 sentences, 2 main points
+
+描述最高的数值和增长的趋势。
+
+It is clear that Nokia sold the most mobile phones between 2009 and 2011, but Samsung became the best selling brand in 2013. ;Samsung and Apple saw the biggest rises in sales over the 5-year period.
+
+
+
+#### Details - 2 paragraphs, compare the bars
+
+第三段可以比较某两个具体的项目。
+
+Paragraph 3: **comparisons**, <u>changes over time</u>
+
+In 2009, Nokia sold close to 450 million mobile phones, which was **almost double** the number of handsets sold by the **second most successful** manufacturer, Samsung. <u>Over the following four years</u>, however, Nokia's <u>sales figures fell by approximately 200 million units</u>, **whereas** Samsung <u>saw sales rise by a similar amount</u>. By 2013, Samsung **had become the market leader** with sales reaching 450 million units.
+
+第四段可以结合剩余项目进行比较。
+
+Paragraph 4: **comparisons**, <u>changes over time</u>
+
+The other three top selling mobile phone brands between 2009 and 2013 were **LG, ZTE and Apple**. In 2009, **these companies sold** around 125 million, 50 million and 25 million mobile handsets **respectively**, <u>but **Apple overtook the other two** vendors in 2011</u>. In 2013, <u>purchases of Apple handsets reached</u> 150 million units, **while** <u>LG saw declining sales</u> **and** the <u>figures for ZTE rose only slightly.</u>
+
+#### 词汇
+
+- ﻿﻿sold worldwide
+- ﻿﻿sales figures, purchases
+- ﻿﻿most popular, best selling brand, top selling
+- ﻿﻿second most successful manufacturer
+- ﻿﻿market leader
+- ﻿﻿mobiles phones, handsets, units
+- ﻿﻿brands, manufacturers, companies, vendors
+- ﻿﻿saw the biggest rises, saw declining sales
+- ﻿﻿close to, almost, approximately, around
+- ﻿﻿double the number
+- ﻿﻿rise by a similar amount
+- ﻿﻿respectively
+- ﻿﻿overtook the other two vendors

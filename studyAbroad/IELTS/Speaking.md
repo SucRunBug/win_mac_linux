@@ -88,3 +88,135 @@ What's your favourite colour? My favourite colour is blue because it's the colou
 
 A good way to practise:
 Do you like..? games, walking, gardens, flowers, dancing
+
+
+
+Do you work or are you a student?
+
+Do you enjoy your job / studies? 
+
+Yes, I love working as a doctor because I like helping people. But I'm not enjoying studying English so much.
+
+
+
+Would you like to get a different job in the future? 
+
+No, I'm really happy with the career that I've chosen, so I have no plans to change jobs.
+
+
+
+4 questions about one topic
+For example:
+Let's talk about sport.
+
+
+
+## IELTS speaking part 2
+
+- ﻿﻿3 to 4 minutes
+- ﻿﻿1 minute to prepare
+- ﻿﻿speak for 2 minutes
+- ﻿﻿task card
+- ﻿﻿describe..
+
+
+
+Make notes:
+
+Quickly decide what you're going to talk about.
+
+
+
+Technique:
+
+Follow the points on the task card. They help your structure and give you something to say. Say as much as you can for each point.
+
+
+
+Before the exam:
+
+Prepare for common topic areas
+
+Vocabulary and ideas are the key
+
+
+
+Topics, techniques, vocabulary, example question
+
+### 6 main topic areas:
+
+Describe a person/ a place/ an object/ an event/ an activity/ your favourites
+
+Prepare ideas and vocabulary
+
+not grammar or linking
+
+Speak naturally, explain in detail content, not structure
+
+
+
+#### Describe a person
+
+- ﻿﻿teacher
+- ﻿﻿famous person
+- ﻿﻿friend
+- ﻿﻿family member
+- ﻿﻿child
+- ﻿﻿someone who helps people
+- ﻿﻿someone who does something well
+
+
+
+- ﻿who (appearance, personality)
+- ﻿what he / she does
+
+- when / how / where you met
+
+- ﻿﻿how you know about this person
+- ﻿﻿why you like this person
+
+Preparation tip:
+
+- ﻿﻿think of a 'theme' for any person (friend, family, famous, child etc.)
+- ﻿﻿start with easy adjectives 
+- search for better words and phrases
+
+主题是指可以用一个整体的词概括此人，例如hard-working，然后根据主题列举简单的形容词，例如busy, active，之后再找到更好的词替换，例如conscientious, someone you can count on
+
+这些词不是主题的同义词，而是与主题相关的词汇。
+
+hard-working 'theme':
+
+- ﻿﻿enthusiastic
+- ﻿﻿energetic
+- ﻿﻿studious
+- ﻿﻿persistent
+- ﻿﻿motivated
+- ﻿﻿determined to succeed someone who sees things through
+- ﻿﻿a good team player
+- ﻿﻿likes to challenge himself / herself
+
+friendly 'theme':
+
+- kind, caring
+
+- generous, unselfish
+
+- ﻿big-hearted
+- ﻿﻿supportive
+- ﻿﻿down-to-earth, easy-going
+- ﻿﻿always there when you need him / her
+- ﻿﻿someone who cheers me up
+- ﻿﻿a big / magnetic personality
+- ﻿﻿lights up the room
+
+Final step in preparation: 
+
+Think of examples or stories to demonstrate each theme.
+My brother is hard-working: 1 remember when he used to get up at 5am to do some extra work before school...
+
+You can't prepare for everything 
+
+you will need to adapt your ideas and improvise in the test
+
+Practise, record, improve
